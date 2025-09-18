@@ -27,6 +27,10 @@
     "VIEW_COMPILED_PATH": "/tmp/storage/framework/views",
     "SESSION_DRIVER": "array",
     "LOG_CHANNEL": "stderr",
-    "CACHE_DRIVER": "array"
+    "CACHE_DRIVER": "array",
+    "CACHE_PATH": "/tmp/storage/framework/cache",
+    "SESSION_LIFETIME": "120",
+    "FILESYSTEM_DISK": "local",
+    "STORAGE_PATH": "/tmp/storage"
   }
 }

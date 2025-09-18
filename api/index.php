@@ -10,6 +10,23 @@ ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
+// 为 Vercel serverless 环境创建必要的存储目录
+if (!file_exists('/tmp/storage')) {
+    mkdir('/tmp/storage', 0755, true);
+}
+if (!file_exists('/tmp/storage/framework')) {
+    mkdir('/tmp/storage/framework', 0755, true);
+}
+if (!file_exists('/tmp/storage/framework/views')) {
+    mkdir('/tmp/storage/framework/views', 0755, true);
+}
+if (!file_exists('/tmp/storage/framework/cache')) {
+    mkdir('/tmp/storage/framework/cache', 0755, true);
+}
+if (!file_exists('/tmp/storage/framework/sessions')) {
+    mkdir('/tmp/storage/framework/sessions', 0755, true);
+}
+
 // 定义应用路径
 define('LARAVEL_START', microtime(true));
 
