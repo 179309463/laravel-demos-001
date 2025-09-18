@@ -11,4 +11,25 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    build: {
+        outDir: 'public/build',
+        emptyOutDir: true,
+        manifest: true,
+        rollupOptions: {
+            output: {
+                manualChunks: undefined,
+            },
+        },
+        chunkSizeWarningLimit: 1600,
+    },
+    server: {
+        hmr: {
+            host: 'localhost',
+        },
+    },
+    resolve: {
+        alias: {
+            '~bootstrap': 'bootstrap',
+        },
+    },
 });
